@@ -116,15 +116,15 @@ const App = () => {
     });
   }, [formValues]);
 
-  const checkLength = (array) => {
-    if (array.length > 0) {
-      array.map((user) => {
-        return (
-          <TeamList deleteUser={deleteUser} key={user.id} details={user} />
-        );
-      });
-    }
-  };
+  // const checkLength = (array) => {
+  //   if (array.length > 0) {
+  //     array.map((user) => {
+  //       return (
+  //         <TeamList deleteUser={deleteUser} key={user.id} details={user} />
+  //       );
+  //     });
+  //   }
+  // };
 
   return (
     <div className="App">

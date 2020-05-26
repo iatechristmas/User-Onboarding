@@ -1,8 +1,8 @@
 import * as yup from "yup";
 
 const formSchema = yup.object().shape({
-  name: yup.string().required("name is a required field"),
-  email: yup.string().required("email is a required field"),
+  name: yup.string().trim().min(3, "Username required"),
+  email: yup.string().email("Email must be valid").required("Email required"),
   password: yup.string().required("password is a required field"),
   tos: yup.boolean().oneOf([true], "Must Accept Terms and Conditions"),
 });

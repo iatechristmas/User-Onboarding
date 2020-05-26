@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const Form = (props) => {
   const {
@@ -14,7 +15,9 @@ const Form = (props) => {
     <form onSubmit={onSubmit}>
       <div>
         <h2>Add a user</h2>
-        <button disabled={disabled}>submit</button>
+        <button className="submit" disabled={disabled}>
+          submit
+        </button>
         <div className="errors">
           <div>{errors.name}</div>
           <div>{errors.email}</div>
